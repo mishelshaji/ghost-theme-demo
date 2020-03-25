@@ -1,0 +1,32 @@
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Search
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{!-- Search box --}}
+                <input id="ghost-search-field" class="form-control" placeholder="Type here">
+                
+                {{!-- Area to display search result --}}
+                <ul id="ghost-search-results"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Place this code through code injection
+<script type="text/javascript">
+    let ghostSearch = new GhostSearch({
+        key: 'place_the_content_api_key_generated_in_step_1_here',
+        host: 'https://demo.ghost.io', //Replace with api url obtained in step 1
+    })
+</script> --}}
