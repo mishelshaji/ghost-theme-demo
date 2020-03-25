@@ -13,9 +13,7 @@
             {{!-- Displays the featured image if exists --}}
             {{#if feature_image}}
             <figure>
-            
-                <img src="{{img_url feature_image}}" alt="{{title}}" class="img-fluid" />
-
+                <img src="{{img_url feature_image}}" alt="{{title}}" class="img-fluid"/>
             </figure>
             {{/if}}
 
@@ -24,9 +22,7 @@
                 <section>
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
-
                         <span>/</span> <a href="{{url}}">{{name}}</a>
-
                     {{/primary_tag}}
                 </section>
 
@@ -34,9 +30,6 @@
                     {{!-- Display the post content --}}
                     {{content}}
                 </div>
-
-                {{> "comment"}}
-
             </section>
 
         </article>
