@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<main id="site-main" class="container">
+    <div class="inner">
+
+        <article class="{{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+
+            <h1 class="text-center">{{title}}</h1>
+
+            {{!-- Displays the featured image if exists --}}
+            {{#if feature_image}}
+            <figure>
+                <img src="{{img_url feature_image}}" alt="{{title}}" class="img-fluid" />
+            </figure>
+            {{/if}}
+
+            <section>
+
+                <section>
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                    {{#primary_tag}}
+                    <span>/</span> <a href="{{url}}">{{name}}</a>
+                    {{/primary_tag}}
+                </section>
+
+                <div class="post-content">
+                    {{!-- Display the post content --}}
+                    {{content}}
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</main>
+
+{{/post}}

@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+        <img src="{{@site.logo}}" alt="{{@site.title}}" style="height: 30px; max-width: 150px;">
+    </a>
+    <div class="nav navbar-nav">
+        {{#foreach navigation}}
+        <a class="nav-item nav-link {{#if current}}active{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+        {{/foreach}}
+    </div>
+</nav>
